@@ -34,7 +34,7 @@
 	attributesfile = ~/.gitattributes
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
-
+    editor = "mate -w"
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
@@ -54,6 +54,7 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = diffmerge
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
@@ -73,6 +74,16 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
-
 [push]
 	default = matching
+
+[github]
+    user = ralphschindler
+    password = !security find-generic-password -gs github.password -w | tr -d '\n'
+[credential]
+    helper = osxkeychain
+
+# user
+[user]
+    name = Ralph Schindler
+    email = ralph@ralphschindler.com

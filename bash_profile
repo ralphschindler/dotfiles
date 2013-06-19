@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -36,7 +36,13 @@ complete -W "NSGlobalDomain" defaults
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
 # Autocomplete Grunt commands
-which grunt &> /dev/null && eval "$(grunt --completion=bash)"
+# which grunt &> /dev/null && eval "$(grunt --completion=bash)"
 
 # If possible, add tab completion for many more commands
-[ -f /etc/bash_completion ] && source /etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+if [ -f /Users/ralphschindler/.phpbrew/bashrc ]; then
+	source /Users/ralphschindler/.phpbrew/bashrc
+fi

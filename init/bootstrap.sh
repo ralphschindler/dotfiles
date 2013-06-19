@@ -2,19 +2,23 @@
 cd "$(dirname "${BASH_SOURCE}")"
 # git pull origin master
 function doIt() {
-    TOP="$(pwd)"
-    FILES=$TOP/dot/*
+    TOP1="$(pwd)"
+	TOP2=$(dirname "$TOP1")
+    FILES=$TOP2/*
     for f in $FILES
     do
+		if [[ ! -f $f || "$f" == *README.md* ]]; then
+			continue
+		fi
         filename=$(basename "$f")
-        dotfilename="~/.$filename"
+        dotfilename=$HOME"/.$filename"
         echo "Linking $f ... as $dotfilename ... "
-        # link here
+        ln -s $f $dotfilename
     done
     
     # copy bin here
-    BIN_DIR=$TOP/.bin
-    mkdir -p $BIN_DIR
+    # BIN_DIR=$TOP2/.bin
+    mkdir -p $HOME"/.bin"
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
