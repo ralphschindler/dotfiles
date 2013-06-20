@@ -45,6 +45,7 @@ brew install libxml2
 brew install mcrypt
 brew install gmp
 brew install libevent
+brew isntall mysql
 
 brew link icu4c
 
