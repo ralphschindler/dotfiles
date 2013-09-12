@@ -33,8 +33,9 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-	whitespace = space-before-tab,indent-with-non-tab,trailing-space
-    editor = "mate -w"
+	# whitespace = space-before-tab,indent-with-non-tab,trailing-space
+	editor = "mate -w"
+	autocrlf = input
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
@@ -55,6 +56,9 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = false
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
@@ -78,12 +82,12 @@
 	default = matching
 
 [github]
-    user = ralphschindler
-    password = !security find-generic-password -gs github.password -w | tr -d '\n'
+	user = ralphschindler
+	password = !security find-generic-password -gs github.password -w | tr -d '\n'
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 
 # user
 [user]
-    name = Ralph Schindler
-    email = ralph@ralphschindler.com
+	name = Ralph Schindler
+	email = ralph@ralphschindler.com

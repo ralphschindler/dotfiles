@@ -46,3 +46,4 @@ fi
 if [ -f /Users/ralphschindler/.phpbrew/bashrc ]; then
 	source /Users/ralphschindler/.phpbrew/bashrc
 fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
