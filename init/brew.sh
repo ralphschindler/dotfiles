@@ -41,6 +41,7 @@ brew install libtool
 brew install icu4c
 brew install gettext
 brew install jpeg
+brew install exiftool
 brew install libxml2
 brew install mcrypt
 brew install gmp
@@ -49,6 +50,7 @@ brew install mysql
 brew install lesspipe
 brew install node
 brew install npm
+brew install gist
 
 brew link icu4c
 

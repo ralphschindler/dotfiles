@@ -81,6 +81,13 @@
 [push]
 	default = matching
 
+[mergetool "diffmerge"]
+    cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+    trustExitCode = false
+
+[merge]
+    tool = diffmerge
+
 [github]
 	user = ralphschindler
 	password = !security find-generic-password -gs github.password -w | tr -d '\n'
