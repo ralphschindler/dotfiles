@@ -47,4 +47,6 @@ if [ -f /Users/ralphschindler/.phpbrew/bashrc ]; then
 	source /Users/ralphschindler/.phpbrew/bashrc
 fi
 
+eval "$(grunt --completion=bash)"
+
 shopt -s -o ignoreeof
