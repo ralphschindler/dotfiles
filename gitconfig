@@ -36,26 +36,32 @@
 	# whitespace = space-before-tab,indent-with-non-tab,trailing-space
 	editor = "mate -w -l 1"
 	autocrlf = input
+
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
+
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
+
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
+
 [color "status"]
 	added = yellow
 	changed = green
 	untracked = cyan
+
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 	tool = diffmerge
+
 [mergetool "diffmerge"]
 	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
 	trustExitCode = false
@@ -70,31 +76,28 @@
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
 	pushInsteadOf = "git://github.com/"
+
 [url "git://github.com/"]
 	insteadOf = "github:"
+
 [url "git@gist.github.com:"]
 	insteadOf = "gst:"
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
+
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+
 [push]
 	default = matching
-
-[mergetool "diffmerge"]
-    cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-    trustExitCode = false
-
-[merge]
-    tool = diffmerge
 
 [github]
 	user = ralphschindler
 	password = !security find-generic-password -gs github.password -w | tr -d '\n'
+
 [credential]
 	helper = osxkeychain
 
-# user
 [user]
 	name = Ralph Schindler
 	email = ralph@ralphschindler.com
