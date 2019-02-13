@@ -21,15 +21,15 @@ brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
-
 # Install other useful binaries
 brew install ack
+brew install bash-completion
 brew install git
 brew install imagemagick
+brew install ngrep
 brew install rename
 brew install tree
 brew install webkit2png
-brew install bash-completion
 
 brew install automake
 brew install autoconf

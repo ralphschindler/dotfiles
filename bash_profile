@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/.bin:$HOME/.composer/vendor/bin:$HOME/.dope/bin:vendor/bin:/usr/local/share/npm/bin:$PATH"
+export PATH=".:$HOME/.bin:$HOME/.composer/vendor/bin:$HOME/.dope/bin:vendor/bin:/usr/local/share/npm/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -36,20 +36,13 @@ complete -W "NSGlobalDomain" defaults
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
 # If possible, add tab completion for many more commands
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 if [ -f /Users/ralphschindler/.phpbrew/bashrc ]; then
 	source /Users/ralphschindler/.phpbrew/bashrc
 fi
 
 shopt -s -o ignoreeof
-
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
-
-ulimit -n 512
 
 eval "$(thefuck --alias)"
 

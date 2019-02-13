@@ -28,12 +28,7 @@ export COPYFILE_DISABLE=true
 # lesspipe
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
 
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
-
 export COMPOSER_DISABLE_XDEBUG_WARN=true
 
-# export JAVA_HOME="$(/usr/libexec/java_home)"
-# export AWS_ACCESS_KEY="<Your AWS Access ID>"
-# export AWS_SECRET_KEY="<Your AWS Secret Key>"
-# export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.14.001/libexec"
+# Laravel apps, force local environment
+export APP_ENV=local

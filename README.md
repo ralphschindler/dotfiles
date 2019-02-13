@@ -48,6 +48,32 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 * Git settings
 * SSH settings
 
+
+
+
+
+
+
+
+
+# 2017
+
+- cli tools
+- homebrew
+- homebrew-php
+- brew cask
+    - install textmate
+    - install adium
+    - install alfred
+    - intsall iterm2
+    - install querious
+    - install slack
+    - install docker
+- resize dock
+- unpin docker icons
+
+    - 
+
 ## Original Author Inspiration
 
 [Mathias Bynens's](http://mathiasbynens.be/) [dotfiles](https://github.com/mathiasbynens/dotfiles/)
