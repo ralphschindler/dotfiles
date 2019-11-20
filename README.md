@@ -2,7 +2,9 @@
 
 ## Installation
 
-todo
+1. Clone this repository to $HOME/.dotfiles
+2. Run `install.sh`
+3. Run `macos.sh`
 
 ## Original Author Inspiration
 

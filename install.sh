@@ -14,41 +14,19 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh)
-  
-  
-  
-# old: 
+# download latest ZSH iterm2 bindings
+curl -L https://iterm2.com/shell_integration/zsh -o $HOME/.iterm2_shell_integration.zsh)
 
-# cd "$(dirname "${BASH_SOURCE}")"
-# # git pull origin master
-# function doIt() {
-#     TOP1="$(pwd)"
-#   TOP2=$(dirname "$TOP1")
-#     FILES=$TOP2/*
-#     for f in $FILES
-#     do
-#     if [[ ! -f $f || "$f" == *README.md* ]]; then
-#       continue
-#     fi
-#         filename=$(basename "$f")
-#         dotfilename=$HOME"/.$filename"
-#         echo "Linking $f ... as $dotfilename ... "
-#         ln -s $f $dotfilename
-#     done
-#
-#     # copy bin here
-#     # BIN_DIR=$TOP2/.bin
-#     mkdir -p $HOME"/.bin"
-# }
-# if [ "$1" == "--force" -o "$1" == "-f" ]; then
-#   doIt
-# else
-#   read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
-#   echo
-#   if [[ $REPLY =~ ^[Yy]$ ]]; then
-#     doIt
-#   fi
-# fi
-# unset doIt
-# echo "run 'source ~/.bash_profile' in order for any changes to take effect"
+# Terminal be quiet
+touch $HOME/.hushlogin
+
+# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
+rm -rf $HOME/.zshrc
+ln -s $HOME/.dotfiles/zshrc $HOME/.zshrc
+
+# Other .dotfile configs
+ln -s $HOME/.dotfiles/gitattributes $HOME/.gitattributes
+ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
+ln -s $HOME/.dotfiles/gitignore $HOME/.gitignore
+ln -s $HOME/.dotfiles/screenrs $HOME/.screenrc
+ln -s $HOME/.dotfiles/wgetrc $HOME/.wgetrc

@@ -1,3 +1,4 @@
+export PATH=".:$HOME/.bin:$HOME/.composer/vendor/bin:$HOME/.dope/bin:vendor/bin:/usr/local/share/npm/bin:$PATH"
 
 # Make mate the default editor
 export EDITOR="mate -w"
