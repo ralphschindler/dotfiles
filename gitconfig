@@ -37,6 +37,9 @@
 	editor = "mate -w -l 1"
 	autocrlf = input
 
+[init]
+	defaultBranch = master
+
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
@@ -71,6 +74,12 @@
 	remote = origin
 	merge = refs/heads/master
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 # URL shorthands
 [url "git@github.com:"]
 	insteadOf = "gh:"
@@ -91,20 +100,18 @@
 [push]
 	default = matching
 
-[github]
-	user = ralphschindler
-	password = !security find-generic-password -gs github.password -w | tr -d '\n'
-
 [credential]
 	helper = osxkeychain
+
+
+## User specific config
 
 [user]
 	name = Ralph Schindler
 	email = ralph@ralphschindler.com
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[init]
-	defaultBranch = master
+
+[github]
+	user = ralphschindler
+	password = !security find-generic-password -gs github.password -w | tr -d '\n'
+
+
