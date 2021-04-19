@@ -68,6 +68,6 @@ alias badge="tput bel"
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
 
-alias dc="docker-compose"
+alias dc="docker compose"
 
 alias nah="git reset --hard;git clean -df;"
