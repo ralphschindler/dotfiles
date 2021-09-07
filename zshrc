@@ -23,6 +23,7 @@ ZSH_THEME=""
 plugins=(
   git
   shrink-path
+  zsh-autosuggestions
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -32,4 +33,8 @@ source $ZSH/oh-my-zsh.sh
 
 # iTerm2 integration (setup via: curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# forward word
+bindkey ^O forward-word
+bindkey '\e' autosuggest-accept
 
