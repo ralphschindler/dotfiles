@@ -4,7 +4,7 @@ echo "Setting up your Mac..."
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Update Homebrew recipes
@@ -15,7 +15,7 @@ brew tap homebrew/bundle
 brew bundle
 
 # download latest ZSH iterm2 bindings
-curl -L https://iterm2.com/shell_integration/zsh -o $HOME/.iterm2_shell_integration.zsh)
+curl -L https://iterm2.com/shell_integration/zsh -o $HOME/.iterm2_shell_integration.zsh
 
 # Terminal be quiet
 touch $HOME/.hushlogin
