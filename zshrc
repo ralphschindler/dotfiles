@@ -24,6 +24,7 @@ plugins=(
   git
   shrink-path
   zsh-autosuggestions
+  zsh-z
 )
 source $ZSH/oh-my-zsh.sh
 
