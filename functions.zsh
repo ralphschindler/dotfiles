@@ -231,3 +231,13 @@ function tinkerwell {
 
   open "tinkerwell://?cwd=$TW_PATH"
 }
+
+function dce {
+	FIRST_SERVICE=$(yq e '.services|keys|.[0]' docker-compose.yml)
+	echo "Running: docker compose exec $FIRST_SERVICE $@"
+	docker compose exec $FIRST_SERVICE $@
+}
+
+function dceb {
+	dce bash
+}

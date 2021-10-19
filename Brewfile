@@ -5,7 +5,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
-# Binaries
+# Binaries & Tools
 brew 'awscli'
 brew 'bat'
 brew 'coreutils'
@@ -25,9 +25,10 @@ brew 'pngpaste'
 brew 'tidy-html5'
 brew 'trash'
 brew 'tree'
+brew 'yq'
 brew 'zlib'
 
-# Dev tools
+# Languages & Servers
 brew 'php'
 brew 'composer'
 brew 'mysql'
