@@ -115,3 +115,5 @@
 	password = !security find-generic-password -gs github.password -w | tr -d '\n'
 
 
+[tag]
+	sort = -v:refname

@@ -18,6 +18,7 @@ brew 'httpie'
 brew 'hub'
 brew 'imagemagick'
 brew 'jq'
+brew 'kubernetes-cli'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config'
@@ -31,10 +32,7 @@ brew 'zlib'
 # Languages & Servers
 brew 'php'
 brew 'composer'
-brew 'mysql'
-brew 'nginx'
 brew 'node'
-brew 'redis'
 
 # Apps
 cask 'alfred'
