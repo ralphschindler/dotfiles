@@ -24,6 +24,10 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/ralphschindler/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ralphschindler/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Update Homebrew recipes
 brew update
 

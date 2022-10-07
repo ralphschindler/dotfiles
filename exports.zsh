@@ -28,7 +28,7 @@ export GREP_OPTIONS="--color=auto"
 export COPYFILE_DISABLE=true
 
 # lesspipe
-export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s"
 
 export COMPOSER_DISABLE_XDEBUG_WARN=true
 
