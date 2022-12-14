@@ -1,4 +1,4 @@
-export PATH=".:$HOME/.bin:$HOME/.composer/vendor/bin:$HOME/.dope/bin:vendor/bin:/usr/local/share/npm/bin:$PATH"
+export PATH=".:$HOME/.bin:$HOME/.composer/vendor/bin:vendor/bin:/usr/local/share/npm/bin:$PATH"
 
 # Make mate the default editor
 export EDITOR="mate -w"
@@ -28,7 +28,7 @@ export GREP_OPTIONS="--color=auto"
 export COPYFILE_DISABLE=true
 
 # lesspipe
-export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s"
+export LESSOPEN="|$HOMEBREW_PREFIX/bin/lesspipe.sh %s"
 
 export COMPOSER_DISABLE_XDEBUG_WARN=true
 
