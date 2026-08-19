@@ -15,6 +15,9 @@ ZSH_CUSTOM=$DOTFILES
 # Theme settings
 ZSH_THEME=""
 
+CASE_SENSITIVE="true"
+COMPLETION_WAITING_DOTS="true"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -39,3 +42,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 bindkey ^O forward-word
 bindkey '\e' autosuggest-accept
 
+autoload -U +X bashcompinit && bashcompinit
+
+# Load local, untracked zshrc additions if present
+[[ -f "$DOTFILES/zshrc.local" ]] && source "$DOTFILES/zshrc.local"

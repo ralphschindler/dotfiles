@@ -83,8 +83,8 @@ build_prompt() {
 
 build_rprompt() {
   RETVAL=$?
-  prompt_git
-  prompt_time
+  # prompt_git
+  # prompt_time
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt) '

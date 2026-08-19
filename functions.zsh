@@ -233,11 +233,14 @@ function tinkerwell {
 }
 
 function dce {
-  FIRST_SERVICE=$(yq e '.services|keys|.[0]' docker-compose.yml)
-  echo "Running: docker compose exec $FIRST_SERVICE $@"
-  docker compose exec $FIRST_SERVICE $@
+  FIRST_SERVICE=$(yq e '.services|keys|.[0]' (docker-compose|compose).y*ml)
+  echo "Running: docker-compose exec $FIRST_SERVICE $@"
+  docker-compose exec $FIRST_SERVICE $@
 }
 
 function dceb {
   dce bash
 }
+
+# Load local, untracked functions if present
+[[ -f "$DOTFILES/functions.local.zsh" ]] && source "$DOTFILES/functions.local.zsh"

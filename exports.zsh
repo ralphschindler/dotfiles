@@ -1,4 +1,21 @@
-export PATH=".:$HOME/.bin:$HOME/.composer/vendor/bin:$HOME/.dope/bin:vendor/bin:/usr/local/share/npm/bin:$PATH"
+export GOPATH="$HOME/.go"
+
+path_entries=(
+  "."
+  "vendor/bin"
+  "$HOME/.local/bin"
+  "$HOME/.composer/vendor/bin"
+  "/opt/homebrew/opt/mysql-client/bin"
+  "$HOME/.go/bin"
+  "$HOME/.cargo/bin/"
+  "$HOME/.jenv/bin"
+  "$HOME/.opencode/bin"
+  "/opt/homebrew/bin"
+  "/usr/local/share/npm/bin"
+  "$PATH"
+)
+
+export PATH="$(IFS=:; echo "${path_entries[*]}")"
 
 # Make mate the default editor
 export EDITOR="mate -w"
@@ -41,3 +58,6 @@ export ZSH_AUTOSUGGEST_STRATEGY=(
     history
     completion
 )
+
+# Load local, untracked exports if present
+[[ -f "$DOTFILES/exports.local.zsh" ]] && source "$DOTFILES/exports.local.zsh"

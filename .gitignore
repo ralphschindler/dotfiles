@@ -1,0 +1,4 @@
+aliases.local.zsh
+exports.local.zsh
+functions.local.zsh
+zshrc.local

@@ -17,3 +17,12 @@ Thumbs.db
 .Trashes
 
 _scratch/
+.scratch/
+
+# Global notes file
+_notes_.*
+
+# Tinkerwell fluff
+.phpactor.json
+
+**/.claude/settings.local.json
