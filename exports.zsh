@@ -5,12 +5,12 @@ path_entries=(
   "vendor/bin"
   "$HOME/.local/bin"
   "$HOME/.composer/vendor/bin"
-  "/opt/homebrew/opt/mysql-client/bin"
+  "$HOMEBREW_PREFIX/opt/mysql-client/bin"
   "$HOME/.go/bin"
   "$HOME/.cargo/bin/"
   "$HOME/.jenv/bin"
   "$HOME/.opencode/bin"
-  "/opt/homebrew/bin"
+  "$HOMEBREW_PREFIX/bin"
   "/usr/local/share/npm/bin"
   "$PATH"
 )
@@ -45,7 +45,7 @@ export GREP_OPTIONS="--color=auto"
 export COPYFILE_DISABLE=true
 
 # lesspipe
-export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s"
+export LESSOPEN="|$HOMEBREW_PREFIX/bin/lesspipe.sh %s"
 
 export COMPOSER_DISABLE_XDEBUG_WARN=true
 
